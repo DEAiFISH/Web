@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>查看图片</title>
+    <style type="text/css">
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        #outer{
+            width: 480px;
+            margin: 50px auto;
+            padding: 20px;
+            background: bisque;
+            text-align: center;
+        }
+
+
+    </style>
+
+
+    <script>
+
+        window.onload = function (){
+
+            var prev = document.getElementById("prev");
+            var next = document.getElementById("next");
+            var img = document.getElementsByTagName("img")[0];
+            var imgs = ["img/img01.jpeg","img/img02.jpeg","img/img03.jpeg","img/img04.jpeg"];
+            var index = 0;
+            var info = document.getElementById("info");
+            info.innerHTML = "一共有 " + imgs.length +
+                " 张，当前第 " + (index + 1) + " 张";
+            prev.onclick = function (){
+                index--;
+                if(index == -1){
+                    index = 3;
+                }
+                img.src = imgs[index];
+                info.innerHTML = "一共有 " + imgs.length +
+                    " 张，当前第 " + (index + 1) + " 张";
+            };
+            next.onclick = function (){
+                index++;
+                if(index == imgs.length){
+                    index = 0;
+                }
+                img.src = imgs[index];
+                info.innerHTML = "一共有 " + imgs.length +
+                    " 张，当前第 " + (index + 1) + " 张";
+            };
+
+            
+
+
+        };
+
+    </script>
+
+</head>
+<body>
+
+<div id="outer">
+    <p id="info"></p>
+    <img src="img/img01.jpeg" height="360" alt="风景"/><br>
+    <button id="prev">上一张</button>
+    <button id="next">下一张</button>
+</div>
+
+</body>
+</html>

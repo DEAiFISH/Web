@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>第一个js程序</title>
+
+    <script>
+        function Person(name, age) {
+            this.name = name;
+            this.age = age;
+        };
+
+        Person.prototype.toString = function () {
+            return "Person[name=" + this.name + ",age=" + this.age + "]";
+        };
+
+
+        document.write(new Person("猴哥", 580));
+
+        var date = new Date("11/15/02 11:15:12");
+        console.log(date);
+
+    </script>
+
+</head>
+<body>
+
+<h1>你好<h1>
+
+</body>
+</html>

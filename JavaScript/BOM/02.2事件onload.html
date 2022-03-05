@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件onload</title>
+
+    <script>
+        /**
+         * onload 会在整个颜面加载完成后才触发
+         * 为window绑定一个onload事件
+         */
+        window.onload = function (){
+            var btn = document.getElementById("btn");
+
+            btn.onclick = function (){
+                alert("你好👋");
+            };
+        }
+    </script>
+</head>
+<body>
+
+    <button id="btn">按钮</button>
+</body>
+</html>

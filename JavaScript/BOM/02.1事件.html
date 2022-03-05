@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM.事件</title>
+</head>
+<body>
+
+    <script>
+        /**
+         *    事件，就是用户和浏览器之间的交互行为，
+         *         比如：点击按钮，移动鼠标，关闭窗口。。。
+         */
+    </script>
+
+
+    <!--
+       耦合性高，不便于后期维护
+     -->
+    <button id="btn">我是一个按钮</button>
+    <br><br>
+    <button id="btn1" onclick="alert('单击一下')">我是一个单击按钮</button>
+    <br><br>
+    <button ondblclick="alert('双击')">我是一个双击按钮</button>
+
+
+    <!--
+        一般这样写
+    -->
+    <br><br>
+    <button id="b">按钮</button>
+
+    <script>
+        var btn = document.getElementById("b");
+        btn.onclick = function (){
+            alert("点我干嘛！");
+        };
+    </script>
+
+</body>
+</html>

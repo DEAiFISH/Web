@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+
+    <script>
+
+        /*
+        使用正则表达式判断字符串中是否有a或b或c
+         */
+
+        var reg = new RegExp();
+
+        reg = /a|b|c/;
+
+
+
+        console.log(reg.test("a"));
+        console.log(reg.test("b"));
+        console.log(reg.test("c"));
+        console.log(reg.test("d"));
+
+        /*
+        ***************************************
+        */
+
+        /*
+        创建一个正则表达式判断是否有字母
+         */
+
+        var reg = new RegExp();
+
+        reg = /[a-z]/;
+
+        /*
+        [ab] == a|b
+        [A-z] == 任意字母
+        a|[c-e]|z == a|c|d|e|z
+         */
+
+
+        /*
+        [^]   除了
+
+        [^0-9]  除了0-9
+
+         */
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>
